@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "yuuki_mod:myBlock"
+  },
+  "pattern": [
+    " s ",
+    "sss",
+    " s "
+  ],
+  "type":"minecraft:crafting_shaped",
+  "key": {
+    "s": {
+      "item": "yuuki_mod:myItem"
+    }
+  }
+
+}
