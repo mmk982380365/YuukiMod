@@ -1,4 +1,8 @@
 tile.yuuki_mod.myBlock.name=233 Block
+tile.yuuki_mod.mercury.name=mercury
 item.yuuki_mod.myItem.name=233 Item
 item.yuuki_mod.myTool.name=233 Tool
+item.yuuki_mod.bucketMercury.name=mercury
+item.yuuki_mod.myFood.name=233 Food
 itemGroup.tap=Yuuki Mod
+death.attack.byPig=%skilled By Pig

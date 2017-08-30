@@ -1,0 +1,14 @@
+{
+  "result": {
+    "item": "yuuki_mod:myFood",
+    "count": 4
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:dirt",
+      "data":0
+    }
+  ],
+  "type":"minecraft:crafting_shapeless"
+
+}

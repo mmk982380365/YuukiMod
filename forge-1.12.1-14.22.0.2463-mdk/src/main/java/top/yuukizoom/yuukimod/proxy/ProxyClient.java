@@ -13,5 +13,8 @@ public class ProxyClient extends ProxyCommon{
         YuukiMod.myItem.loadModel();
         YuukiMod.myBlock.loadModel();
         YuukiMod.myTool.loadModel();
+        YuukiMod.myFood.loadModel();
+        YuukiMod.blockFluidMercury.loadModel();
+        YuukiMod.itemBucketMercury.loadModel();
     }
 }

@@ -1,4 +1,8 @@
 tile.yuuki_mod.myBlock.name=233方块
+tile.yuuki_mod.mercury.name=水银
 item.yuuki_mod.myItem.name=233道具
 item.yuuki_mod.myTool.name=233工具
+item.yuuki_mod.bucketMercury.name=水银
+item.yuuki_mod.myFood.name=233食物
 itemGroup.tap=Yuuki的东西
+death.attack.byPig=%s被猪吃了

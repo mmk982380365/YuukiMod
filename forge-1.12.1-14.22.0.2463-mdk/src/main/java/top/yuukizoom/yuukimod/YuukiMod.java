@@ -1,6 +1,9 @@
 package top.yuukizoom.yuukimod;
 
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.storage.loot.LootTableList;
+import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -8,11 +11,15 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import top.yuukizoom.yuukimod.blocks.BlockFluidMercury;
 import top.yuukizoom.yuukimod.blocks.MyBlock;
 import top.yuukizoom.yuukimod.command.MyCommand;
 import top.yuukizoom.yuukimod.creativetap.MyTap;
 import top.yuukizoom.yuukimod.event.EventLoader;
 import top.yuukizoom.yuukimod.event.WorldGenerationLoader;
+import top.yuukizoom.yuukimod.fluid.Mercury;
+import top.yuukizoom.yuukimod.items.ItemBucketMercury;
+import top.yuukizoom.yuukimod.items.MyFood;
 import top.yuukizoom.yuukimod.items.MyItem;
 import top.yuukizoom.yuukimod.items.MyTool;
 import top.yuukizoom.yuukimod.proxy.ProxyCommon;
@@ -33,7 +40,10 @@ public class YuukiMod {
     public static MyItem myItem;
     public static MyTap myTap;
     public static MyTool myTool;
-
+    public static MyFood myFood;
+    public static Mercury mercury;
+    public static BlockFluidMercury blockFluidMercury;
+    public static ItemBucketMercury itemBucketMercury;
 
 
     public static MyCommand myCommand;
@@ -78,6 +88,17 @@ public class YuukiMod {
         myTool = new MyTool();
         myTool.registerItem();
 
+        myFood = new MyFood();
+        myFood.registerItem();
+
+        mercury = new Mercury();
+        mercury.registerFluid();
+
+        blockFluidMercury = new BlockFluidMercury();
+        blockFluidMercury.registerBlock();
+
+        itemBucketMercury = new ItemBucketMercury();
+        itemBucketMercury.registerItem();
 
 
         GameRegistry.addSmelting(myBlock,new ItemStack(myItem,1),100.0f);
@@ -88,6 +109,8 @@ public class YuukiMod {
         eventLoader = new EventLoader();
         worldGenerationLoader = new WorldGenerationLoader();
 
+
+//        LootTableList.register(new ResourceLocation(YuukiMod.ModId,"loot_table"));
 
     }
 

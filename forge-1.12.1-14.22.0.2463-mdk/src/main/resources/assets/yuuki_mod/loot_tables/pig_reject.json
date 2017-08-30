@@ -1,0 +1,21 @@
+{
+  "pools":[
+    {
+      "type": "item",
+      "rolls": 1,
+      "name": "yuuki_mod:main",
+      "entries": [
+        {
+          "type": "item",
+          "name": "yuuki_mod:myItem",
+          "weight":30
+        },
+        {
+          "type": "item",
+          "name": "yuuki_mod:myTool",
+          "weight":60
+        }
+      ]
+    }
+  ]
+}

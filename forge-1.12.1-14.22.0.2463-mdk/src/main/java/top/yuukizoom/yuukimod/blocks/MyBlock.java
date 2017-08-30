@@ -24,7 +24,7 @@ public class MyBlock extends Block implements YBlock {
 
         setHardness(10.0f);
         setResistance(10.0f);
-        setLightLevel(0.0f);
+        setLightLevel(20.0f);
         setHarvestLevel("pickaxe",4);
         setSoundType(SoundType.SNOW);
 
