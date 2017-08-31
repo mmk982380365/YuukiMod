@@ -24,6 +24,8 @@ public class MyTool extends ItemTool implements YItem{
 
         super(100.0f,10.0f, MYMATERIAL,new HashSet());
         setHarvestLevel("pickaxe",4);
+        setHarvestLevel("axe",4);
+
 
         setMaxDamage(0);
     }

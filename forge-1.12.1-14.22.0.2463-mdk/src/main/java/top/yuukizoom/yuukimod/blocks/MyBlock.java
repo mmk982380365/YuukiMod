@@ -57,9 +57,10 @@ public class MyBlock extends Block implements YBlock {
 
     @Override
     public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state) {
-        super.onBlockDestroyedByPlayer(worldIn, pos, state);
-
+//        super.onBlockDestroyedByPlayer(worldIn, pos, state);
+//        Item
         System.out.println(pos);
+//        worldIn.setBlockState(pos,state);
 
     }
 }

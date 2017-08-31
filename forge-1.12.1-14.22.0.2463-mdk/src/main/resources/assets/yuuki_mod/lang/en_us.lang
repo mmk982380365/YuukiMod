@@ -5,4 +5,5 @@ item.yuuki_mod.myTool.name=233 Tool
 item.yuuki_mod.bucketMercury.name=mercury
 item.yuuki_mod.myFood.name=233 Food
 itemGroup.tap=Yuuki Mod
+entity.GoldenChicken.name=Golden Chicken
 death.attack.byPig=%skilled By Pig

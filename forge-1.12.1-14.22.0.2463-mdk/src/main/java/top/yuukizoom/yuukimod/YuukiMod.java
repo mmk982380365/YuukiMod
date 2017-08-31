@@ -4,17 +4,23 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import top.yuukizoom.yuukimod.blocks.BlockFluidMercury;
 import top.yuukizoom.yuukimod.blocks.MyBlock;
 import top.yuukizoom.yuukimod.command.MyCommand;
+import top.yuukizoom.yuukimod.configuration.ConfigLoader;
 import top.yuukizoom.yuukimod.creativetap.MyTap;
+import top.yuukizoom.yuukimod.entity.EntityGoldenChicken;
+import top.yuukizoom.yuukimod.entity.EntityLoader;
 import top.yuukizoom.yuukimod.event.EventLoader;
 import top.yuukizoom.yuukimod.event.WorldGenerationLoader;
 import top.yuukizoom.yuukimod.fluid.Mercury;
@@ -36,6 +42,8 @@ public class YuukiMod {
     public static final String ModId = "yuuki_mod";
     public static final String Version = "1.0";
 
+    public static ConfigLoader configLoader;
+
     public static MyBlock myBlock;
     public static MyItem myItem;
     public static MyTap myTap;
@@ -45,6 +53,8 @@ public class YuukiMod {
     public static BlockFluidMercury blockFluidMercury;
     public static ItemBucketMercury itemBucketMercury;
 
+    public static EntityGoldenChicken entityGoldenChicken;
+
 
     public static MyCommand myCommand;
 
@@ -53,6 +63,10 @@ public class YuukiMod {
 
     @SidedProxy(clientSide = "top.yuukizoom.yuukimod.proxy.ProxyClient",serverSide = "top.yuukizoom.yuukimod.proxy.ProxyCommon")
     public static ProxyCommon proxy;
+
+    @Mod.Instance(YuukiMod.ModId)
+    public static YuukiMod instance;
+
 
     @EventHandler
     public void init (FMLInitializationEvent e)
@@ -72,7 +86,7 @@ public class YuukiMod {
     {
 
 
-
+        configLoader = new ConfigLoader(e);
 
         myTap = new MyTap();
 
@@ -99,6 +113,10 @@ public class YuukiMod {
 
         itemBucketMercury = new ItemBucketMercury();
         itemBucketMercury.registerItem();
+
+        new EntityLoader();
+
+
 
 
         GameRegistry.addSmelting(myBlock,new ItemStack(myItem,1),100.0f);
