@@ -1,7 +1,19 @@
 {
   "variants": {
-    "normal": {
+    "facing=east": {
       "model": "yuuki_mod:myblock"
+    },
+    "facing=south": {
+      "model": "yuuki_mod:myblock",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "yuuki_mod:myblock",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "yuuki_mod:myblock",
+      "y": 270
     }
   }
 }

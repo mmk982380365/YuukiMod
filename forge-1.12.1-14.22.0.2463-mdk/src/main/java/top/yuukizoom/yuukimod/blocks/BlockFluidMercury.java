@@ -19,7 +19,7 @@ import top.yuukizoom.yuukimod.YuukiMod;
 public class BlockFluidMercury extends BlockFluidClassic implements YBlock{
     public BlockFluidMercury ()
     {
-        super(YuukiMod.mercury, Material.CAKE);
+        super(YuukiMod.mercury, Material.WATER);
     }
 
     @Override

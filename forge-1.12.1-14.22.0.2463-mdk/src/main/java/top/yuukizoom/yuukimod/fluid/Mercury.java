@@ -17,7 +17,7 @@ public class Mercury extends Fluid implements YFluid{
     {
         super("yuuki_mod.mercury",still,flowing);
         setDensity(13600);
-        setViscosity(750);
+        setViscosity(700);
         setLuminosity(0);
         setTemperature(300);
     }
