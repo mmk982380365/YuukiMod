@@ -1,9 +1,12 @@
 package top.yuukizoom.yuukimod.entity.render;
 
 import net.minecraft.client.model.ModelChicken;
+import net.minecraft.client.model.ModelPig;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.entity.RenderChicken;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.RenderPig;
 import net.minecraft.util.ResourceLocation;
 import top.yuukizoom.yuukimod.YuukiMod;
 import top.yuukizoom.yuukimod.entity.EntityGoldenChicken;
@@ -27,7 +30,8 @@ public class RenderGoldenChicken extends RenderLiving<EntityGoldenChicken> {
     protected void preRenderCallback(EntityGoldenChicken entitylivingbaseIn, float partialTickTime) {
 //        super.preRenderCallback(entitylivingbaseIn, partialTickTime);
 
-        GlStateManager.scale(2.5f,2.5f,2.5f);
+        GlStateManager.scale(25f,25f,25f);
+
 
     }
 
