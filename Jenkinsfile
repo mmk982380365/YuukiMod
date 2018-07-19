@@ -9,7 +9,7 @@ node {
    }
    stage('Build') {
       // Run the maven build
-      
+       
       ./gradlew build
       
    }
